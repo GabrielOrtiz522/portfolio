@@ -22,15 +22,6 @@ html{
 
 body {
     background-color: whitesmoke;
-      /* --- Footer siempre abajo --- */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-    min-height: 100vh;
 }
 
 ul {
@@ -404,6 +395,7 @@ a {
     display: flex;
     align-items: center;
     background: #121214;
+    border-radius: 10px;
     position: relative;
 }
 
@@ -427,9 +419,7 @@ a {
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    font-family: 'Questrial', sans-serif;
-    
-    
+    font-family: 'Questrial', sans-serif;   
 }
 
 .texto-redes a{
@@ -464,7 +454,21 @@ footer {
 /* ******* Diseño Responsive ****** */
 
 @media screen and (max-width:1200px) {
+    
+    .contenedor-proyectos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
 
+    .card-proyecto {
+        width: 425px;
+    }
+
+    .card-proyecto img {
+        width: 400px;
+    }
 }
 
 @media screen and (max-width:720px) {
@@ -534,7 +538,59 @@ footer {
 
     .contenedor-habilidades {
         justify-content: center;
+        align-items: center;
     }
 
+    .contenedor-proyectos {
+        display: flex;
+        width: 450px;
+    }
 
+    .card-proyecto {
+        width: 400px;
+    }
+
+    .card-proyecto img {
+        width: 380px;
+        margin: 10px;
+        border: black solid thin;
+        border-radius: 10px;
+    }
+
+    .formulario {
+        display: none;
+    }
+
+    .contenedor-redes {
+        display: flex;
+        width: 400px;
+        margin: auto;
+    }
+
+    .banner-redes {
+        flex-direction: column-reverse;
+        width: 100%;
+        background: #121214;
+        justify-content: space-between;
+    }
+
+    .icon-redes img{
+        display: none;
+    }
+
+    .banner-redes .texto-redes {
+        width: 90%;
+    }
+
+    .texto-redes {  
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-family: 'Questrial', sans-serif;
+        padding: 20px;
+    }
+    
+    footer {
+        margin-top: 10px;
+    }
 }
